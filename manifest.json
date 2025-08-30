@@ -1,0 +1,27 @@
+{
+  "name": "ChatGPT Token Sniffer + Archiver",
+  "version": "0.3.0",
+  "manifest_version": 3,
+  "description": "Captures Bearer tokens from previous requests and uses them to archive chats.",
+
+  "permissions": ["storage", "webRequest", "webRequestBlocking"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://api.openai.com/*",
+    "https://auth.openai.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
