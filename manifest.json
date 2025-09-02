@@ -1,8 +1,8 @@
 {
-  "name": "ChatGPT Token Sniffer + Archiver",
+  "name": "ChatGPT Token Bulk Archiver",
   "version": "0.3.0",
   "manifest_version": 3,
-  "description": "Captures Bearer tokens from previous requests and uses them to archive chats.",
+  "description": "Easily save and back up your ChatGPT conversations by capturing tokens automatically and archiving chats in bulk.",
 
   "permissions": ["storage", "webRequest", "webRequestBlocking"],
   "host_permissions": [
